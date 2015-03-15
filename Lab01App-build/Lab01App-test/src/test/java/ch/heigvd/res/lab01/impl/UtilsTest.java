@@ -38,6 +38,8 @@ public class UtilsTest {
   public void itShouldBePossibleToGetANewLineOnUnix() {
     String lines = "hello\nworld\n";
     String[] r1 = Utils.getNextLine(lines);
+    for (String str : r1)
+        System.out.println(str);
     String[] e1 = {"hello\n", "world\n"};
     assertArrayEquals(e1, r1);
     String[] r2 = Utils.getNextLine(r1[1]);
